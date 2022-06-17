@@ -38,7 +38,7 @@ export default function AdminLoginScreen({navigation}) {
     <SafeAreaView style={styles.safeareaview}>
         <ImageBackground source={require('../images/getstarted.png')} style={styles.container}>
             <StatusBar backgroundColor={colors.blue} />
-            <ScrollView>
+            <View style={{flex: 1}}>
                 <View style={styles.logoheader}>
                     <View style={{ alignSelf: 'center' }}>
                         <Image source={logo} style={styles.logo} />
@@ -75,7 +75,11 @@ export default function AdminLoginScreen({navigation}) {
                         </View>
                     </TouchableOpacity>
                 </View>
-            </ScrollView>
+
+                <View style={{position: 'absolute', right: 20, bottom: 20, borderBottomColor: colors.white, borderBottomWidth: 1}}>
+                    <Text onPress={()=>navigation.goBack()} style={{color: colors.white, fontSize: 20}}>Go Back</Text>
+                </View>
+            </View>
         </ImageBackground>
     </SafeAreaView>
   )

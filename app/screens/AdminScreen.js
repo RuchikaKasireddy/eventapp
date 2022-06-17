@@ -1,6 +1,6 @@
 import React from 'react'
 import {StyleSheet, View, Text, ScrollView, StatusBar, 
-    SafeAreaView, TouchableOpacity
+    SafeAreaView, TouchableOpacity, TouchableWithoutFeedback
 } from 'react-native'
 
 import { FontAwesome } from '@expo/vector-icons'
@@ -17,6 +17,11 @@ export default function AdminScreen({navigation}) {
         <View style={styles.container}>
             <StatusBar backgroundColor={colors.blue} />
             <Heading text="Administrative - Dashboard" />
+            <View style={{backgroundColor: colors.blue, padding: 10}}>
+                <TouchableWithoutFeedback onPress={()=>navigation.goBack()}>
+                    <Ionicons name="arrow-back" size={24} color={colors.white} />
+                </TouchableWithoutFeedback>
+            </View>
             <View style={{ padding: 20, flex: 1 }}>
                 <ScrollView>
                     <View style={{ marginBottom: 10}}>

@@ -1,5 +1,7 @@
 import React from 'react'
-import {StyleSheet, View, Text, SafeAreaView, Platform, StatusBar} from 'react-native'
+import {StyleSheet, View, Text, SafeAreaView, Platform, StatusBar, TouchableWithoutFeedback} from 'react-native'
+
+import { Ionicons } from '@expo/vector-icons'
 
 import colors from '../config/colors'
 import Events from './Events'
@@ -10,11 +12,14 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 
 const Tab = createMaterialTopTabNavigator()
 
-export default function EventScreen() {
+export default function EventScreen({navigation}) {
   return (
     <SafeAreaView style={styles.safeareaview}>
       <StatusBar backgroundColor={colors.blue} />
       <View style={styles.titleview}>
+        <TouchableWithoutFeedback onPress={()=>navigation.goBack()}>
+          <Ionicons name="arrow-back" size={24} color={colors.white} />
+        </TouchableWithoutFeedback>
         <Text style={styles.title} numberOfLines={1}>Grand Valley State University - Events</Text>
       </View>
       <Tab.Navigator
