@@ -1,4 +1,6 @@
 #GVSU EVENTS APP
+#You can view the link on Expo from this url : https://exp.host/@ruchika9/GVSUEvents
+
 <p>This is the present flow of the documentation for the GVSU APP</p>
 <ul>
     <li>Brief Introduction of App and It's Functionalities</li>
